@@ -10,6 +10,11 @@ import UIKit
 
 class StockListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var SpotName: UILabel!
+    @IBOutlet weak var CategoryName: UILabel!
+    @IBOutlet weak var Reason: UILabel!
+    @IBOutlet weak var SpotImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +25,11 @@ class StockListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+//    override func prepareForReuse() {
+//        SpotName.text = nil
+//        CategoryName.text = nil
+//        Reason.text = nil
+//    }
     
 }

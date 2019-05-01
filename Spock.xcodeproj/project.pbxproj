@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85356C6D22798BE700001248 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85356C6C22798BE700001248 /* StockDetailViewController.swift */; };
 		85863FC622796E2B001C25C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FC522796E2B001C25C5 /* AppDelegate.swift */; };
 		85863FC822796E2B001C25C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FC722796E2B001C25C5 /* ViewController.swift */; };
 		85863FCB22796E2B001C25C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85863FC922796E2B001C25C5 /* Main.storyboard */; };
@@ -14,9 +15,10 @@
 		85863FD022796E2D001C25C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85863FCE22796E2D001C25C5 /* LaunchScreen.storyboard */; };
 		85863FDB22796E2D001C25C5 /* SpockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FDA22796E2D001C25C5 /* SpockTests.swift */; };
 		85863FE622796E2D001C25C5 /* SpockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FE522796E2D001C25C5 /* SpockUITests.swift */; };
-		85863FF422797AE2001C25C5 /* StockListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FF322797AE2001C25C5 /* StockListTableViewController.swift */; };
 		85863FF722797B88001C25C5 /* StockListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FF522797B88001C25C5 /* StockListTableViewCell.swift */; };
 		85863FF822797B88001C25C5 /* StockListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85863FF622797B88001C25C5 /* StockListTableViewCell.xib */; };
+		85863FFA227983F8001C25C5 /* shop1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85863FF9227983F8001C25C5 /* shop1.jpeg */; };
+		85863FFC22798503001C25C5 /* StockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FFB22798503001C25C5 /* StockListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85356C6C22798BE700001248 /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
 		85863FC222796E2B001C25C5 /* Spock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85863FC522796E2B001C25C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85863FC722796E2B001C25C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,9 +53,10 @@
 		85863FE122796E2D001C25C5 /* SpockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85863FE522796E2D001C25C5 /* SpockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpockUITests.swift; sourceTree = "<group>"; };
 		85863FE722796E2D001C25C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85863FF322797AE2001C25C5 /* StockListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListTableViewController.swift; sourceTree = "<group>"; };
 		85863FF522797B88001C25C5 /* StockListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListTableViewCell.swift; sourceTree = "<group>"; };
 		85863FF622797B88001C25C5 /* StockListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockListTableViewCell.xib; sourceTree = "<group>"; };
+		85863FF9227983F8001C25C5 /* shop1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shop1.jpeg; sourceTree = "<group>"; };
+		85863FFB22798503001C25C5 /* StockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +109,15 @@
 			children = (
 				85863FC522796E2B001C25C5 /* AppDelegate.swift */,
 				85863FC722796E2B001C25C5 /* ViewController.swift */,
+				85863FF9227983F8001C25C5 /* shop1.jpeg */,
 				85863FC922796E2B001C25C5 /* Main.storyboard */,
 				85863FCC22796E2D001C25C5 /* Assets.xcassets */,
 				85863FCE22796E2D001C25C5 /* LaunchScreen.storyboard */,
 				85863FD122796E2D001C25C5 /* Info.plist */,
-				85863FF322797AE2001C25C5 /* StockListTableViewController.swift */,
 				85863FF522797B88001C25C5 /* StockListTableViewCell.swift */,
 				85863FF622797B88001C25C5 /* StockListTableViewCell.xib */,
+				85863FFB22798503001C25C5 /* StockListViewController.swift */,
+				85356C6C22798BE700001248 /* StockDetailViewController.swift */,
 			);
 			path = Spock;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85863FFA227983F8001C25C5 /* shop1.jpeg in Resources */,
 				85863FD022796E2D001C25C5 /* LaunchScreen.storyboard in Resources */,
 				85863FCD22796E2D001C25C5 /* Assets.xcassets in Resources */,
 				85863FF822797B88001C25C5 /* StockListTableViewCell.xib in Resources */,
@@ -266,10 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85356C6D22798BE700001248 /* StockDetailViewController.swift in Sources */,
 				85863FC822796E2B001C25C5 /* ViewController.swift in Sources */,
-				85863FF422797AE2001C25C5 /* StockListTableViewController.swift in Sources */,
 				85863FF722797B88001C25C5 /* StockListTableViewCell.swift in Sources */,
 				85863FC622796E2B001C25C5 /* AppDelegate.swift in Sources */,
+				85863FFC22798503001C25C5 /* StockListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
