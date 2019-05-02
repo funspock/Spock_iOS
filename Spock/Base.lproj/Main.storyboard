@@ -152,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="2492" y="655"/>
         </scene>
-        <!--Stock Detail View Controller-->
+        <!--スポット詳細-->
         <scene sceneID="c0x-Uo-YsY">
             <objects>
                 <viewController id="RWf-e7-be6" customClass="StockDetailViewController" customModule="Spock" customModuleProvider="target" sceneMemberID="viewController">
@@ -195,6 +195,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q9L-SN-N23"/>
                     </view>
+                    <navigationItem key="navigationItem" title="スポット詳細" id="dtc-03-e4F"/>
                     <connections>
                         <outlet property="StockImage" destination="8su-Fk-N9m" id="Hp6-Th-cuj"/>
                         <outlet property="StockTableView" destination="ANC-wz-2lU" id="vba-TR-05o"/>
