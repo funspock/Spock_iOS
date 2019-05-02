@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="790" y="136"/>
         </scene>
-        <!--Stock List View Controller-->
+        <!--スポットリスト-->
         <scene sceneID="8dM-Xn-FBe">
             <objects>
                 <viewController id="5tc-D0-ji4" customClass="StockListViewController" customModule="Spock" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,6 +113,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fXj-f1-j7v"/>
                     </view>
+                    <navigationItem key="navigationItem" title="スポットリスト" id="cKg-sO-gnp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iqC-EJ-iSd">
+                            <connections>
+                                <segue destination="QOg-Z3-2EG" kind="show" identifier="toCreate" id="BlA-Xo-PRc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="StockList" destination="zgw-R7-NC3" id="VHF-HS-t1I"/>
                         <segue destination="RWf-e7-be6" kind="show" identifier="toDetail" id="2jJ-NG-z9v"/>
@@ -121,6 +128,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5G-hJ-Qsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1734" y="134"/>
+        </scene>
+        <!--スポット追加-->
+        <scene sceneID="g9T-lp-bOE">
+            <objects>
+                <viewController id="QOg-Z3-2EG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KWP-C4-Kpb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3F3-0y-hAD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V7d-IF-9Hi" firstAttribute="bottom" secondItem="3F3-0y-hAD" secondAttribute="bottom" id="0qX-Cz-3qy"/>
+                            <constraint firstItem="3F3-0y-hAD" firstAttribute="top" secondItem="V7d-IF-9Hi" secondAttribute="top" id="2jq-YS-bBA"/>
+                            <constraint firstItem="3F3-0y-hAD" firstAttribute="leading" secondItem="V7d-IF-9Hi" secondAttribute="leading" id="CqA-T3-8Fb"/>
+                            <constraint firstItem="V7d-IF-9Hi" firstAttribute="trailing" secondItem="3F3-0y-hAD" secondAttribute="trailing" id="NIT-xj-PsT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V7d-IF-9Hi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="スポット追加" id="jKd-nx-bwW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAL-ww-PX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2833" y="919"/>
         </scene>
         <!--Stock Detail View Controller-->
         <scene sceneID="c0x-Uo-YsY">

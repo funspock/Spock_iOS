@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StockListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class StockListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var StockList: UITableView!
 
@@ -47,7 +47,6 @@ class StockListViewController: UIViewController, UITableViewDataSource, UITableV
         performSegue(withIdentifier: "toDetail",sender: nil)
     }
     
-
     /*
     // MARK: - Navigation
 

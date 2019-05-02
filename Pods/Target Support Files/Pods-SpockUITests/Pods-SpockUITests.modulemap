@@ -1,0 +1,6 @@
+framework module Pods_SpockUITests {
+  umbrella header "Pods-SpockUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
