@@ -11,6 +11,12 @@ import UIKit
 class StockListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var StockList: UITableView!
+    var spotName:String!
+    var categoryName:String!
+    var reason:String!
+    var spotNames:[String] = ["spot1","spot2","spot3"]
+    var categoryNames:[String] = ["catname1","catname2","catname3"]
+    var reasons:[String] = ["reason1","reason2","reason3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +32,14 @@ class StockListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return spotNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StockListTableViewCell") as! StockListTableViewCell
-        cell.SpotName.text = "Spot Name"
-        cell.CategoryName.text = "Category Name"
-        cell.Reason.text = "hogehogeohoge"
+        cell.SpotName.text = spotNames[indexPath.row]
+        cell.CategoryName.text = categoryNames[indexPath.row]
+        cell.Reason.text = reasons[indexPath.row]
         
         return cell
     }
@@ -44,7 +50,20 @@ class StockListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        spotName = spotNames[indexPath.row]
+        categoryName = categoryNames[indexPath.row]
+        reason = reasons[indexPath.row]
         performSegue(withIdentifier: "toDetail",sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail"{
+            let stockDetailViewController = segue.destination as! StockDetailViewController
+            stockDetailViewController.spotName = spotName
+            stockDetailViewController.categoryName = categoryName
+            stockDetailViewController.reason = reason
+            
+        }
     }
     
     /*

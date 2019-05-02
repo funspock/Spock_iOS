@@ -12,6 +12,9 @@ class StockDetailViewController: UIViewController, UITableViewDataSource, UITabl
 
     @IBOutlet weak var StockImage: UIImageView!
     @IBOutlet weak var StockTableView: UITableView!
+    var spotName:String!
+    var categoryName:String!
+    var reason:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +40,12 @@ class StockDetailViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "StockDetailCell", for: indexPath)
         
         if indexPath.section == 0 {
-            cell.textLabel?.text = "スポット名：" + "aaaa"
+            cell.textLabel?.text = "スポット名：" + spotName
         } else if indexPath.section == 1 {
-            cell.textLabel?.text = "カテゴリ名：" + "aaaa"
+            cell.textLabel?.text = "カテゴリ名：" + categoryName
         } else if indexPath.section == 2 {
             cell.textLabel?.numberOfLines = 0
-            cell.textLabel?.text = "なぜ気になった？：" + "hogehoghehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoghehogehogehogehogehogehogehogehogehogehogehogehogehogehoge"
+            cell.textLabel?.text = "なぜ気になった？：" + reason
         }
         
         return cell
