@@ -1,0 +1,6 @@
+framework module Pods_Spock {
+  umbrella header "Pods-Spock-umbrella.h"
+
+  export *
+  module * { export * }
+}

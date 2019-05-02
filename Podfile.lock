@@ -1,0 +1,21 @@
+PODS:
+  - Eureka (4.3.1)
+  - ImageRow (3.2.0):
+    - Eureka (~> 4.3)
+
+DEPENDENCIES:
+  - Eureka
+  - ImageRow
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Eureka
+    - ImageRow
+
+SPEC CHECKSUMS:
+  Eureka: 28ea296f06710f6745266b71f17862048941a32d
+  ImageRow: 03681b3ef8034b5a649440325f5d5ba7b22c1b0a
+
+PODFILE CHECKSUM: e459d49536d16849dc1fd2ea8539bfcc0525a00d
+
+COCOAPODS: 1.6.1

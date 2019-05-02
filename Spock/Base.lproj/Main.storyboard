@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bYp-IK-Zq3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="BTI-wj-5Js">
+            <objects>
+                <navigationController id="bYp-IK-Zq3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bga-a4-LL1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yQK-uX-8Ou"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWi-Vy-6DJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50" y="135"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -47,6 +63,10 @@
                                 <state key="normal" title="ログイン">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BO6-ua-hi0"/>
+                                    <segue destination="5tc-D0-ji4" kind="show" identifier="toStockList" id="LSV-bo-BL3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,10 +86,124 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LAS-oZ-4PW"/>
+                    <connections>
+                        <outlet property="passwordField" destination="2X6-nU-S6R" id="bEO-uq-Gaq"/>
+                        <outlet property="userNameField" destination="KsV-0J-YMa" id="6Vu-X3-HuG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="790" y="136"/>
+        </scene>
+        <!--スポットリスト-->
+        <scene sceneID="8dM-Xn-FBe">
+            <objects>
+                <viewController id="5tc-D0-ji4" customClass="StockListViewController" customModule="Spock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAI-SE-vHG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zgw-R7-NC3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fXj-f1-j7v" firstAttribute="bottom" secondItem="zgw-R7-NC3" secondAttribute="bottom" id="o9i-Hd-lcT"/>
+                            <constraint firstItem="zgw-R7-NC3" firstAttribute="top" secondItem="fXj-f1-j7v" secondAttribute="top" id="oLN-b2-5aL"/>
+                            <constraint firstItem="fXj-f1-j7v" firstAttribute="trailing" secondItem="zgw-R7-NC3" secondAttribute="trailing" id="yWH-Bq-nGa"/>
+                            <constraint firstItem="zgw-R7-NC3" firstAttribute="leading" secondItem="fXj-f1-j7v" secondAttribute="leading" id="zO8-UW-mNs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fXj-f1-j7v"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="スポットリスト" id="cKg-sO-gnp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iqC-EJ-iSd">
+                            <connections>
+                                <segue destination="QOg-Z3-2EG" kind="show" identifier="toCreate" id="BlA-Xo-PRc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="StockList" destination="zgw-R7-NC3" id="VHF-HS-t1I"/>
+                        <segue destination="RWf-e7-be6" kind="show" identifier="toDetail" id="2jJ-NG-z9v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5G-hJ-Qsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695" y="135"/>
+        </scene>
+        <!--スポット追加-->
+        <scene sceneID="g9T-lp-bOE">
+            <objects>
+                <viewController id="QOg-Z3-2EG" customClass="StockCreateViewController" customModule="Spock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KWP-C4-Kpb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="V7d-IF-9Hi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="スポット追加" id="YlZ-gX-rxp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dre-C6-3jy"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAL-ww-PX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492" y="655"/>
+        </scene>
+        <!--スポット詳細-->
+        <scene sceneID="c0x-Uo-YsY">
+            <objects>
+                <viewController id="RWf-e7-be6" customClass="StockDetailViewController" customModule="Spock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BWw-Ev-M3w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8su-Fk-N9m">
+                                <rect key="frame" x="0.0" y="64" width="375" height="267"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ANC-wz-2lU">
+                                <rect key="frame" x="0.0" y="331" width="375" height="336"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StockDetailCell" id="c0w-e1-n8j">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c0w-e1-n8j" id="gZv-rq-Ftr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RWf-e7-be6" id="mx3-R5-xRl"/>
+                                    <outlet property="delegate" destination="RWf-e7-be6" id="rUx-rq-h43"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8su-Fk-N9m" firstAttribute="height" secondItem="BWw-Ev-M3w" secondAttribute="height" multiplier="0.4" id="AzF-e5-1r3"/>
+                            <constraint firstItem="ANC-wz-2lU" firstAttribute="leading" secondItem="q9L-SN-N23" secondAttribute="leading" id="Edf-Sx-DKe"/>
+                            <constraint firstItem="ANC-wz-2lU" firstAttribute="top" secondItem="8su-Fk-N9m" secondAttribute="bottom" id="ae5-9W-mti"/>
+                            <constraint firstItem="q9L-SN-N23" firstAttribute="bottom" secondItem="ANC-wz-2lU" secondAttribute="bottom" id="emU-Zf-cMG"/>
+                            <constraint firstItem="q9L-SN-N23" firstAttribute="trailing" secondItem="8su-Fk-N9m" secondAttribute="trailing" id="j1h-RQ-geo"/>
+                            <constraint firstItem="q9L-SN-N23" firstAttribute="trailing" secondItem="ANC-wz-2lU" secondAttribute="trailing" id="jnj-mO-F1g"/>
+                            <constraint firstItem="8su-Fk-N9m" firstAttribute="top" secondItem="q9L-SN-N23" secondAttribute="top" id="kbC-aM-wzy"/>
+                            <constraint firstItem="8su-Fk-N9m" firstAttribute="leading" secondItem="q9L-SN-N23" secondAttribute="leading" id="qAX-D9-hee"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q9L-SN-N23"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="スポット詳細" id="dtc-03-e4F"/>
+                    <connections>
+                        <outlet property="StockImage" destination="8su-Fk-N9m" id="Hp6-Th-cuj"/>
+                        <outlet property="StockTableView" destination="ANC-wz-2lU" id="vba-TR-05o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="su8-BO-gVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492" y="-260"/>
         </scene>
     </scenes>
 </document>
