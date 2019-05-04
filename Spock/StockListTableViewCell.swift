@@ -25,6 +25,12 @@ class StockListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        spotName.text = nil
+        memo.text = nil
+        spotImage.image = nil
+    }
+    
 //    override func prepareForReuse() {
 //        SpotName.text = nil
 //        CategoryName.text = nil

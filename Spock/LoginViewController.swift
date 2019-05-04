@@ -53,6 +53,7 @@ class LoginViewController: UIViewController {
                     switch response.result {
                     case .success:
                         print("Success!")
+                        self.performSegue(withIdentifier: "toStockList", sender: nil)
                         let alert: UIAlertController = UIAlertController(title: "ログイン成功", message: "ログインしました", preferredStyle:  UIAlertController.Style.alert)
                         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                             // ボタンが押された時の処理を書く（クロージャ実装）

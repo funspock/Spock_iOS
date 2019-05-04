@@ -9,6 +9,8 @@
 import UIKit
 import Eureka
 import ImageRow
+import Alamofire
+import AlamofireImage
 
 class StockCreateViewController: FormViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -98,7 +100,7 @@ class StockCreateViewController: FormViewController, UIImagePickerControllerDele
                             row.section?.insert(labelRow, at: row.indexPath!.row + index + 1)
                         }
                     }
-            }
+        }
     }
     
     
@@ -123,6 +125,32 @@ class StockCreateViewController: FormViewController, UIImagePickerControllerDele
         let memo = values["DescRowTag"] as! String
         let image = values["ImageRowTag"] as! UIImage
         
+        if let urlString = KeyManager().getValue(key: "data_key") as? String {
+            Alamofire.upload(
+                multipartFormData: { multipartFormData in
+                    // 送信する値の指定をここでします
+                    let data = image.jpegData(compressionQuality: 0.5)
+                    print(data!)
+                    multipartFormData.append(data!, withName: "img", fileName: spotName + ".jpeg", mimeType: "image/jpeg")
+                    multipartFormData.append(userName!.data(using: String.Encoding.utf8)!, withName: "username")
+                    multipartFormData.append(memo.data(using: String.Encoding.utf8)!, withName: "memo")
+                    multipartFormData.append(spotName.data(using: String.Encoding.utf8)!, withName: "spot_name")
+            },
+                to: urlString,
+                encodingCompletion: { encodingResult in
+                    switch encodingResult {
+                    case .success(let upload, _, _):
+                        upload.responseJSON { response in
+                            // 成功
+                            let responseData = response
+                            print(responseData ?? "成功")
+                        }
+                    case .failure(let encodingError):
+                        // 失敗
+                        print(encodingError)
+                    }
+            }
+            )        }
         
     }
     
