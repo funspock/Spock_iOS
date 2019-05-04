@@ -11,7 +11,7 @@
 		85356C6D22798BE700001248 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85356C6C22798BE700001248 /* StockDetailViewController.swift */; };
 		85356C6F227AB04E00001248 /* StockCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85356C6E227AB04E00001248 /* StockCreateViewController.swift */; };
 		85863FC622796E2B001C25C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FC522796E2B001C25C5 /* AppDelegate.swift */; };
-		85863FC822796E2B001C25C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FC722796E2B001C25C5 /* ViewController.swift */; };
+		85863FC822796E2B001C25C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FC722796E2B001C25C5 /* LoginViewController.swift */; };
 		85863FCB22796E2B001C25C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85863FC922796E2B001C25C5 /* Main.storyboard */; };
 		85863FCD22796E2D001C25C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85863FCC22796E2D001C25C5 /* Assets.xcassets */; };
 		85863FD022796E2D001C25C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85863FCE22796E2D001C25C5 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,9 @@
 		85863FF822797B88001C25C5 /* StockListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85863FF622797B88001C25C5 /* StockListTableViewCell.xib */; };
 		85863FFA227983F8001C25C5 /* shop1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 85863FF9227983F8001C25C5 /* shop1.jpeg */; };
 		85863FFC22798503001C25C5 /* StockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85863FFB22798503001C25C5 /* StockListViewController.swift */; };
+		85ECE728227DB88A0048C118 /* shop2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85ECE727227DB8890048C118 /* shop2.jpg */; };
+		85ECE72C227DC1EB0048C118 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85ECE72B227DC1EB0048C118 /* APIKey.plist */; };
+		85ECE72E227DC31A0048C118 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECE72D227DC31A0048C118 /* KeyManager.swift */; };
 		9A652BAD3CBCBD758CB7AF08 /* Pods_SpockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DE65C35A2631BC8F1D2F2D /* Pods_SpockUITests.framework */; };
 		E54428CFAE669A299E5CBAE4 /* Pods_Spock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD78EC8426357ACEEB64EE4B /* Pods_Spock.framework */; };
 /* End PBXBuildFile section */
@@ -52,7 +55,7 @@
 		85356C6E227AB04E00001248 /* StockCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCreateViewController.swift; sourceTree = "<group>"; };
 		85863FC222796E2B001C25C5 /* Spock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85863FC522796E2B001C25C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85863FC722796E2B001C25C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85863FC722796E2B001C25C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85863FCA22796E2B001C25C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85863FCC22796E2D001C25C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85863FCF22796E2D001C25C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		85863FF9227983F8001C25C5 /* shop1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shop1.jpeg; sourceTree = "<group>"; };
 		85863FFB22798503001C25C5 /* StockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewController.swift; sourceTree = "<group>"; };
 		85B26B37227ABFE600F1639C /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85ECE727227DB8890048C118 /* shop2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shop2.jpg; sourceTree = "<group>"; };
+		85ECE72B227DC1EB0048C118 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		85ECE72D227DC31A0048C118 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 		B2A1A6F39387CAA6EC19E637 /* Pods-SpockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpockTests.release.xcconfig"; path = "Target Support Files/Pods-SpockTests/Pods-SpockTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA4F2129401EDA4976BE9216 /* Pods-SpockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpockUITests.debug.xcconfig"; path = "Target Support Files/Pods-SpockUITests/Pods-SpockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFB957418061DFA5378091F7 /* Pods_SpockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +119,6 @@
 				BA4F2129401EDA4976BE9216 /* Pods-SpockUITests.debug.xcconfig */,
 				EB634D9764686E082C9875ED /* Pods-SpockUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,17 +160,20 @@
 			isa = PBXGroup;
 			children = (
 				85863FC522796E2B001C25C5 /* AppDelegate.swift */,
-				85863FC722796E2B001C25C5 /* ViewController.swift */,
 				85863FF9227983F8001C25C5 /* shop1.jpeg */,
+				85ECE727227DB8890048C118 /* shop2.jpg */,
 				85863FC922796E2B001C25C5 /* Main.storyboard */,
 				85863FCC22796E2D001C25C5 /* Assets.xcassets */,
 				85863FCE22796E2D001C25C5 /* LaunchScreen.storyboard */,
 				85863FD122796E2D001C25C5 /* Info.plist */,
 				85863FF522797B88001C25C5 /* StockListTableViewCell.swift */,
 				85863FF622797B88001C25C5 /* StockListTableViewCell.xib */,
+				85863FC722796E2B001C25C5 /* LoginViewController.swift */,
 				85863FFB22798503001C25C5 /* StockListViewController.swift */,
 				85356C6C22798BE700001248 /* StockDetailViewController.swift */,
 				85356C6E227AB04E00001248 /* StockCreateViewController.swift */,
+				85ECE72B227DC1EB0048C118 /* APIKey.plist */,
+				85ECE72D227DC31A0048C118 /* KeyManager.swift */,
 			);
 			path = Spock;
 			sourceTree = "<group>";
@@ -298,8 +306,10 @@
 			files = (
 				85863FFA227983F8001C25C5 /* shop1.jpeg in Resources */,
 				85863FD022796E2D001C25C5 /* LaunchScreen.storyboard in Resources */,
+				85ECE72C227DC1EB0048C118 /* APIKey.plist in Resources */,
 				85863FCD22796E2D001C25C5 /* Assets.xcassets in Resources */,
 				85863FF822797B88001C25C5 /* StockListTableViewCell.xib in Resources */,
+				85ECE728227DB88A0048C118 /* shop2.jpg in Resources */,
 				85863FCB22796E2B001C25C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,15 +406,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Spock/Pods-Spock-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageRow/ImageRow.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageRow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -419,7 +435,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				85356C6D22798BE700001248 /* StockDetailViewController.swift in Sources */,
-				85863FC822796E2B001C25C5 /* ViewController.swift in Sources */,
+				85863FC822796E2B001C25C5 /* LoginViewController.swift in Sources */,
+				85ECE72E227DC31A0048C118 /* KeyManager.swift in Sources */,
 				85863FF722797B88001C25C5 /* StockListTableViewCell.swift in Sources */,
 				85863FC622796E2B001C25C5 /* AppDelegate.swift in Sources */,
 				85863FFC22798503001C25C5 /* StockListViewController.swift in Sources */,

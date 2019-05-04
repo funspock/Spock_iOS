@@ -8,6 +8,9 @@ target 'Spock' do
   use_frameworks!
   pod 'Eureka'
   pod 'ImageRow'
+  pod 'Alamofire'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'AlamofireImage', '~> 3.5'
   # Pods for Spock
 
   target 'SpockTests' do

@@ -10,10 +10,9 @@ import UIKit
 
 class StockListTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var SpotName: UILabel!
-    @IBOutlet weak var CategoryName: UILabel!
-    @IBOutlet weak var Reason: UILabel!
-    @IBOutlet weak var SpotImage: UIImageView!
+    @IBOutlet weak var spotName: UILabel!
+    @IBOutlet weak var memo: UILabel!
+    @IBOutlet weak var spotImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -34,6 +34,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i4w-2J-tmT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghh-yx-NNc">
                                 <rect key="frame" x="68" y="162.5" width="239" height="142.5"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="89"/>
@@ -44,13 +47,13 @@
                                 <rect key="frame" x="80" y="375" width="215" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2X6-nU-S6R">
                                 <rect key="frame" x="80" y="425" width="215" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvC-y2-1TT">
                                 <rect key="frame" x="137.5" y="485" width="100" height="50"/>
@@ -63,6 +66,11 @@
                                 <state key="normal" title="ログイン">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BO6-ua-hi0"/>
                                     <segue destination="5tc-D0-ji4" kind="show" identifier="toStockList" id="LSV-bo-BL3"/>
@@ -78,23 +86,28 @@
                             <constraint firstItem="KsV-0J-YMa" firstAttribute="top" secondItem="ghh-yx-NNc" secondAttribute="bottom" constant="70" id="JiW-Wu-tV5"/>
                             <constraint firstItem="2X6-nU-S6R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M7Z-Ff-XMp"/>
                             <constraint firstItem="2X6-nU-S6R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Pue-bV-eu7"/>
+                            <constraint firstAttribute="bottom" secondItem="i4w-2J-tmT" secondAttribute="bottom" id="Q6v-2Y-G3S"/>
+                            <constraint firstAttribute="trailing" secondItem="i4w-2J-tmT" secondAttribute="trailing" id="We4-tp-c0Q"/>
                             <constraint firstItem="AvC-y2-1TT" firstAttribute="top" secondItem="2X6-nU-S6R" secondAttribute="bottom" constant="30" id="Y15-tn-1dK"/>
+                            <constraint firstItem="i4w-2J-tmT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c1g-WF-Ctc"/>
                             <constraint firstItem="2X6-nU-S6R" firstAttribute="top" secondItem="KsV-0J-YMa" secondAttribute="bottom" constant="20" id="sD8-xG-XEC"/>
                             <constraint firstItem="KsV-0J-YMa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ujG-dc-xmo"/>
                             <constraint firstItem="AvC-y2-1TT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xg6-t7-n8g"/>
                             <constraint firstItem="KsV-0J-YMa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="xqF-vG-Jlp"/>
+                            <constraint firstItem="i4w-2J-tmT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yY6-gz-hBq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="LAS-oZ-4PW"/>
                     <connections>
                         <outlet property="passwordField" destination="2X6-nU-S6R" id="bEO-uq-Gaq"/>
+                        <outlet property="topImage" destination="i4w-2J-tmT" id="n5e-YS-l2Y"/>
                         <outlet property="userNameField" destination="KsV-0J-YMa" id="6Vu-X3-HuG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="136"/>
+            <point key="canvasLocation" x="789.60000000000002" y="135.38230884557723"/>
         </scene>
         <!--スポットリスト-->
         <scene sceneID="8dM-Xn-FBe">
@@ -145,7 +158,11 @@
                         <viewLayoutGuide key="safeArea" id="V7d-IF-9Hi"/>
                     </view>
                     <navigationItem key="navigationItem" title="スポット追加" id="YlZ-gX-rxp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dre-C6-3jy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="dre-C6-3jy">
+                            <connections>
+                                <action selector="spotSave:" destination="QOg-Z3-2EG" id="MsP-PD-3xf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAL-ww-PX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,7 +177,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8su-Fk-N9m">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8su-Fk-N9m">
                                 <rect key="frame" x="0.0" y="64" width="375" height="267"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ANC-wz-2lU">
