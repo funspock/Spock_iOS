@@ -26,6 +26,73 @@
             </objects>
             <point key="canvasLocation" x="-50" y="135"/>
         </scene>
+        <!--ユーザー追加-->
+        <scene sceneID="pQc-7Y-aR3">
+            <objects>
+                <viewController id="neD-L8-8ut" customClass="AddUserViewController" customModule="Spock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nK9-n2-GQa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザー名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXS-AP-6Bp">
+                                <rect key="frame" x="80" y="218.5" width="215" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eit-gT-EN6">
+                                <rect key="frame" x="80" y="298.5" width="215" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhr-bv-fdU">
+                                <rect key="frame" x="137.5" y="378.5" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.66666666669999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9mo-91-2cv"/>
+                                    <constraint firstAttribute="width" constant="100" id="gIE-P0-9iN"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.66666666669999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="追加">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButton:" destination="neD-L8-8ut" eventType="touchUpInside" id="bto-d8-Ak1"/>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xht-jh-1kc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toTop" id="7E3-57-NsZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CXS-AP-6Bp" firstAttribute="centerY" secondItem="nK9-n2-GQa" secondAttribute="centerY" constant="-100" id="HAq-UW-7X9"/>
+                            <constraint firstItem="oEa-42-O0h" firstAttribute="trailing" secondItem="CXS-AP-6Bp" secondAttribute="trailing" constant="80" id="Jjd-vX-cLU"/>
+                            <constraint firstItem="eit-gT-EN6" firstAttribute="leading" secondItem="oEa-42-O0h" secondAttribute="leading" constant="80" id="Msa-Bv-f6R"/>
+                            <constraint firstItem="oEa-42-O0h" firstAttribute="trailing" secondItem="eit-gT-EN6" secondAttribute="trailing" constant="80" id="NmA-55-qzL"/>
+                            <constraint firstItem="CXS-AP-6Bp" firstAttribute="leading" secondItem="oEa-42-O0h" secondAttribute="leading" constant="80" id="OmS-Oe-TSV"/>
+                            <constraint firstItem="CXS-AP-6Bp" firstAttribute="centerX" secondItem="nK9-n2-GQa" secondAttribute="centerX" id="RIp-3X-U8a"/>
+                            <constraint firstItem="eit-gT-EN6" firstAttribute="top" secondItem="CXS-AP-6Bp" secondAttribute="bottom" constant="50" id="jIP-sH-1eJ"/>
+                            <constraint firstItem="zhr-bv-fdU" firstAttribute="top" secondItem="eit-gT-EN6" secondAttribute="bottom" constant="50" id="t5R-hf-ccP"/>
+                            <constraint firstItem="zhr-bv-fdU" firstAttribute="centerX" secondItem="nK9-n2-GQa" secondAttribute="centerX" id="z1w-Fq-lLv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oEa-42-O0h"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ユーザー追加" id="w8j-Lt-LIs"/>
+                    <connections>
+                        <outlet property="password" destination="eit-gT-EN6" id="O7R-F0-oOJ"/>
+                        <outlet property="userName" destination="CXS-AP-6Bp" id="XmD-p3-hyh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNq-ua-vE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="-705"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -97,7 +164,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LAS-oZ-4PW"/>
+                    <navigationItem key="navigationItem" id="2Wx-Sr-itF">
+                        <barButtonItem key="rightBarButtonItem" title="新しいユーザー" id="Yn1-jn-5yP">
+                            <connections>
+                                <action selector="newUser:" destination="BYZ-38-t0r" id="fhj-MB-CBa"/>
+                                <segue destination="neD-L8-8ut" kind="show" id="3BS-X6-qfZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="passwordField" destination="2X6-nU-S6R" id="AE7-BQ-JKr"/>
                         <outlet property="topImage" destination="i4w-2J-tmT" id="9tC-dT-BcP"/>
@@ -118,7 +192,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zgw-R7-NC3">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -178,10 +252,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8su-Fk-N9m">
-                                <rect key="frame" x="0.0" y="64" width="375" height="267"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="267"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ANC-wz-2lU">
-                                <rect key="frame" x="0.0" y="331" width="375" height="336"/>
+                                <rect key="frame" x="0.0" y="287" width="375" height="380"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StockDetailCell" id="c0w-e1-n8j">
@@ -223,4 +297,7 @@
             <point key="canvasLocation" x="2492" y="-260"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7E3-57-NsZ"/>
+    </inferredMetricsTieBreakers>
 </document>

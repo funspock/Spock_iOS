@@ -24,6 +24,7 @@
 		85ECE728227DB88A0048C118 /* shop2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85ECE727227DB8890048C118 /* shop2.jpg */; };
 		85ECE72C227DC1EB0048C118 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85ECE72B227DC1EB0048C118 /* APIKey.plist */; };
 		85ECE72E227DC31A0048C118 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECE72D227DC31A0048C118 /* KeyManager.swift */; };
+		85ECE730227DE1F90048C118 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ECE72F227DE1F90048C118 /* AddUserViewController.swift */; };
 		9A652BAD3CBCBD758CB7AF08 /* Pods_SpockUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DE65C35A2631BC8F1D2F2D /* Pods_SpockUITests.framework */; };
 		E54428CFAE669A299E5CBAE4 /* Pods_Spock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD78EC8426357ACEEB64EE4B /* Pods_Spock.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		85ECE727227DB8890048C118 /* shop2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shop2.jpg; sourceTree = "<group>"; };
 		85ECE72B227DC1EB0048C118 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
 		85ECE72D227DC31A0048C118 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		85ECE72F227DE1F90048C118 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		B2A1A6F39387CAA6EC19E637 /* Pods-SpockTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpockTests.release.xcconfig"; path = "Target Support Files/Pods-SpockTests/Pods-SpockTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA4F2129401EDA4976BE9216 /* Pods-SpockUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpockUITests.debug.xcconfig"; path = "Target Support Files/Pods-SpockUITests/Pods-SpockUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFB957418061DFA5378091F7 /* Pods_SpockTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpockTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 				85356C6E227AB04E00001248 /* StockCreateViewController.swift */,
 				85ECE72B227DC1EB0048C118 /* APIKey.plist */,
 				85ECE72D227DC31A0048C118 /* KeyManager.swift */,
+				85ECE72F227DE1F90048C118 /* AddUserViewController.swift */,
 			);
 			path = Spock;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				85ECE72E227DC31A0048C118 /* KeyManager.swift in Sources */,
 				85863FF722797B88001C25C5 /* StockListTableViewCell.swift in Sources */,
 				85863FC622796E2B001C25C5 /* AppDelegate.swift in Sources */,
+				85ECE730227DE1F90048C118 /* AddUserViewController.swift in Sources */,
 				85863FFC22798503001C25C5 /* StockListViewController.swift in Sources */,
 				85356C6F227AB04E00001248 /* StockCreateViewController.swift in Sources */,
 			);

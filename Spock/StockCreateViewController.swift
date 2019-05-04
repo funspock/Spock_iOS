@@ -144,6 +144,7 @@ class StockCreateViewController: FormViewController, UIImagePickerControllerDele
                             // 成功
                             let responseData = response
                             print(responseData ?? "成功")
+                            self.navigationController?.popViewController(animated: true)
                         }
                     case .failure(let encodingError):
                         // 失敗
